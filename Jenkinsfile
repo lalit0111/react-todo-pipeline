@@ -28,7 +28,8 @@ pipeline {
                 // Perform build steps here, e.g., for a Maven project
                 script {
                     sh 'npm install -y'
-                    sh 'npm start'
+		    sh 'pkill -f "npm start"'
+		    sh 'npm start &'
                 }
             }
         }
