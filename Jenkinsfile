@@ -18,7 +18,7 @@ pipeline {
             steps {
                 // Use the provided Git credentials for authentication
                 script {
-                    git branch: 'main', url: 'https://github.com/lalit0111/react-todo-pipeline', credentialsId: 'github-token'
+                    git branch: 'master', url: 'https://github.com/lalit0111/react-todo-pipeline', credentialsId: 'github-token'
                 }
             }
         }
