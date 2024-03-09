@@ -4,7 +4,7 @@ pipeline {
     }
 
     tools {
-        nodejs 'Node21' // Replace 'NodeJS 14' with your configured Node.js tool name
+        nodejs 'Node21'
     }
 
     stages {
@@ -25,16 +25,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Perform build steps here, e.g., for a Maven project
                 script {
                     sh 'npm install -y'
-		    sh 'pkill -f "npm start"'
-		    sh 'npm start &'
+                    sh "echo 'Build successful!'"
                 }
             }
         }
-
-        // Add more stages as needed, such as testing, deployment, etc.
     }
 
     post {
@@ -45,4 +41,3 @@ pipeline {
             echo 'Build failed!'
         }
     }
-}
