@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // Perform build steps here, e.g., for a Maven project
                 script {
-                    sh 'npm install'
+                    sh 'npm install -y'
                     sh 'npn start'
                 }
             }
